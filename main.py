@@ -57,21 +57,27 @@ def cryptoval():
     print("crypto")
 
 
-print("Välkommen till CTF assistenten")
-print("Vad vill du undersöka?")
-print("1: IP-adess")
-print("2: hash-sträng")
-print("3: crypto")
+def main():
+    while True:
+        print("\nVälkommen till CTF assistenten")
+        print("Vad vill du undersöka?")
+        print("1: IP-adess")
+        print("2: hash-sträng")
+        print("3: crypto")
+        print("4: Avsluta")
 
-val = input("Ange ditt val: ")
+        val = input("Ange ditt val: ")
+        if val == "1":
+            ipval()
+        elif val == "2":
+            hashval()
+        elif val == "3":
+            cryptoval()
+        elif val == "4":
+            print("Avslutar programmet...")
+            break
+        else:
+            print("Ogiltigt val.")
 
-if val == "1":
-    ipval()
-elif val == "2":
-    hashval()
-elif val == "3":
-    cryptoval()
-
-
-else:
-    print("ogiltigt val.")
+if __name__ == "__main__":
+    main()
