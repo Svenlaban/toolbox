@@ -24,7 +24,7 @@ def ipval():
 
     print("1: Portscanning med NMAP")
     print("2: Gobuster enkla directory scanning")
-    print("3: Gobuster .php filer")
+    print("3: IP-adress ursprungsland")
     print("4: Nikto directory scanning")
     print("5: IP-information(whois)")
 
@@ -36,7 +36,9 @@ def ipval():
     elif val == "2":
         print("2")
     elif val == "3":
-        print("3")
+        print("Hämtar ursprungsland")
+        from tools.countrylookup import get_country
+        get_country(ip_adress)
     elif val == "4":
         print("4")
     elif val == "5":
