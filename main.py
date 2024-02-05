@@ -14,6 +14,7 @@ def klassificera_ip(ip):
         print("Ogiltig IP-adress angiven. Skriv in korrekt IP-adress.")
         ipval()
 
+
 def ipval():
     print("Vilken IP adress vill du undersöka?")
     ip_adress = input("Ange en IP-adress: ")  # Notera att du använder 'ip_adress' här
@@ -72,7 +73,10 @@ def main():
         elif val == "2":
             hashval()
         elif val == "3":
-            cryptoval()
+            crot13 = input ("Ange text som ska krypteras/dekrypteras:")
+            from tools.caesar import rot13
+            rot13(crot13)
+
         elif val == "4":
             print("Avslutar programmet...")
             break
