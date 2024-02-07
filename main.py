@@ -63,7 +63,7 @@ def main():
         print("\nVälkommen till CTF assistenten")
         print("Vad vill du undersöka?")
         print("1: IP-adess")
-        print("2: hash-sträng")
+        print("2: Knäcka en lösenordshash")
         print("3: crypto")
         print("4: Avsluta")
 
@@ -71,7 +71,8 @@ def main():
         if val == "1":
             ipval()
         elif val == "2":
-            hashval()
+            from tools.hashcat import run_hashcat
+            run_hashcat()
         elif val == "3":
             crot13 = input ("Ange text som ska krypteras/dekrypteras:")
             from tools.caesar import rot13
