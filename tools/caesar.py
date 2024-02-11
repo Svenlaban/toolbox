@@ -1,4 +1,6 @@
+"""Caesar rot13 Tool"""
 def rot13(text):
+    """Krypterar och dekrypterar rot13 chiffer"""
     result = ""
     for char in text:
         if char.isalpha():  # Only rotate letters
@@ -17,6 +19,3 @@ def rot13(text):
    # decrypted_text = rot13(encrypted_text)
     print("Dekrypterad text:", text)
     return result
-
-
-

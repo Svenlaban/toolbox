@@ -1,6 +1,8 @@
+"""Kollar om det körs webbsida på en IP-adress"""
 import requests
 
 def check_website_status(ip_adress):
+    """Kollar efter statuskod 200 på http och https"""
     # Definiera de två URL:erna för HTTP och HTTPS
     urls = [
         f'http://{ip_adress}',
@@ -19,4 +21,3 @@ def check_website_status(ip_adress):
         except requests.RequestException as e:
             # För alla andra typer av fel
             print(f"Kunde inte ansluta till {url}. Fel: {e}")
-

@@ -1,21 +1,22 @@
+"""CTF Tool"""
 import ipaddress
 
 def klassificera_ip(ip):
+    """Verifierar IP adressen och kollar ifall den är intern eller extern"""
     try:
         # Konvertera strängen till ett IP-adressobjekt
         ip_obj = ipaddress.ip_address(ip)
-
         # Kontrollera om IP-adressen är privat
         if ip_obj.is_private:
-            return "Detta är en intern (privat) IP-adress. Vissa alternativ kommer ej att ge resultat."
-        else:
-            return "Detta är en extern (offentlig) IP-adress. Gör inget som kan anses vara olagligt."
+            return "Detta är en intern (privat) IP-adress. Vissa alternativ ger ej resultat."
+        return "Detta är en extern (offentlig) IP-adress. Gör inget som kan vara olagligt."
     except ValueError:
         print("Ogiltig IP-adress angiven. Skriv in korrekt IP-adress.")
         ipval()
 
 
 def ipval():
+    """Går vidare till att visa olika IP verktyg"""
     print("Vilken IP adress vill du undersöka?")
     ip_adress = input("Ange en IP-adress: ")  # Notera att du använder 'ip_adress' här
     resultat = klassificera_ip(ip_adress)
@@ -32,7 +33,7 @@ def ipval():
     val = input("IP-adress:")
     if val == "1":
         print("Gör en portscanning")
-        from tools.nmap import get_nmapscan
+        from tools.nmapscan import get_nmapscan
         get_nmapscan(ip_adress)
     elif val == "2":
         print("Hämtar whois-data")
@@ -55,14 +56,10 @@ def ipval():
     else:
         print("Ogiltigt val")
 
-def hashval():
-    print("hash")
-
-def cryptoval():
-    print("crypto")
 
 
 def main():
+    """Första-sidan med val av verktyg"""
     while True:
         print("\nVälkommen till CTF assistenten")
         print("Vad vill du undersöka?")

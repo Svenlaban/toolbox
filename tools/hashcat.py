@@ -1,5 +1,5 @@
+""""Hashcat lösenordsdekryptering"""
 import subprocess
-import sys
 
 def run_hashcat():
     """
@@ -13,10 +13,12 @@ def run_hashcat():
         hash_type = input("Ange hashtyp: ")
         hash_string = input("Ange hashsträng: ")
         # Bygger Hashcat-kommandot med alla argument som strängar
-        command = ['hashcat', '-m', hash_type, '-a', '0', hash_string, './tools/wordlist/rockyou.txt']
+        command = ['hashcat', '-m', hash_type, '-a', '0',
+                   hash_string, './tools/wordlist/rockyou.txt']
 
         # Kör Hashcat-kommandot
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                text=True, check=True)
 
         # Skriver ut resultatet
         print("Standard Output:", result.stdout)
