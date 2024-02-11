@@ -29,8 +29,9 @@ def ipval():
     print("3: IP-adress ursprungsland")
     print("4: Kolla om det finns en webbsida uppe")
     print("5: Kolla Geodata")
+    print("6: Sök IP på DuckDuckGo")
 
-    val = input("IP-adress:")
+    val = input("Alternativ:")
     if val == "1":
         print("Gör en portscanning")
         from tools.nmapscan import get_nmapscan
@@ -53,7 +54,9 @@ def ipval():
         from tools.ipapi import get_ipapi_info
         get_ipapi_info(ip_adress)
     elif val == "6":
-        print("6")
+        print(f"Söker efter {ip_adress} på DuckDuckGo.")
+        from tools.duckduckgosearch import duckduckgo_search
+        duckduckgo_search(ip_adress)
     else:
         print("Ogiltigt val")
 
