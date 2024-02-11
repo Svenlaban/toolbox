@@ -48,8 +48,8 @@ def ipval():
         check_website_status(ip_adress)
     elif val == "5":
         print("Kolla geodata")
-        from.tools.ipapi import get_ip_info
-        get_ip_info(ip_adress)
+        from tools.ipapi import get_ipapi_info
+        get_ipapi_info(ip_adress)
     elif val == "6":
         print("6")
     else:
