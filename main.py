@@ -35,6 +35,7 @@ def ipval():
         print("Gör en portscanning")
         from tools.nmapscan import get_nmapscan
         get_nmapscan(ip_adress)
+        print("Resultat sparade till rapport: /nmap_scan_results.txt")
     elif val == "2":
         print("Hämtar whois-data")
         from tools.whois import get_whois
