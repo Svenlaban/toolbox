@@ -24,9 +24,9 @@ def ipval():
     print(f"Det ip vi kommer att undersöka är {ip_adress} hur vill du gå vidare?")
 
     print("1: Portscanning med NMAP")
-    print("2: Gobuster enkla directory scanning")
+    print("2: IP-information(whois)")
     print("3: IP-adress ursprungsland")
-    print("4: Nikto directory scanning")
+    print("4: Kolla om det finns en webbsida uppe")
     print("5: IP-information(whois)")
 
     val = input("IP-adress:")
@@ -35,17 +35,19 @@ def ipval():
         from tools.nmap import get_nmapscan
         get_nmapscan(ip_adress)
     elif val == "2":
-        print("2")
+        print("Hämtar whois-data")
+        from tools.whois import get_whois
+        get_whois(ip_adress)
     elif val == "3":
         print("Hämtar ursprungsland")
         from tools.countrylookup import get_country
         get_country(ip_adress)
     elif val == "4":
-        print("4")
+        print("Kollar om det finns en websida uppe")
+        from tools.checkweb import check_website_status
+        check_website_status(ip_adress)
     elif val == "5":
-        print("Hämtar whois-data")
-        from tools.whois import get_whois
-        get_whois(ip_adress)
+        print("5")
     elif val == "6":
         print("6")
     else:
