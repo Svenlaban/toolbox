@@ -27,7 +27,7 @@ def ipval():
     print("2: IP-information(whois)")
     print("3: IP-adress ursprungsland")
     print("4: Kolla om det finns en webbsida uppe")
-    print("5: IP-information(whois)")
+    print("5: Kolla Geodata")
 
     val = input("IP-adress:")
     if val == "1":
@@ -47,7 +47,9 @@ def ipval():
         from tools.checkweb import check_website_status
         check_website_status(ip_adress)
     elif val == "5":
-        print("5")
+        print("Kolla geodata")
+        from.tools.ipapi import get_ip_info
+        get_ip_info(ip_adress)
     elif val == "6":
         print("6")
     else:
@@ -66,8 +68,9 @@ def main():
         print("Vad vill du undersöka?")
         print("1: IP-adess")
         print("2: Knäcka en lösenordshash")
-        print("3: crypto")
-        print("4: Avsluta")
+        print("3: Caesarchiffer")
+        print("4: Base64 decode/encode")
+        print("5: Avsluta")
 
         val = input("Ange ditt val: ")
         if val == "1":
@@ -79,8 +82,12 @@ def main():
             crot13 = input ("Ange text som ska krypteras/dekrypteras:")
             from tools.caesar import rot13
             rot13(crot13)
-
         elif val == "4":
+            print("Base64 decode/encode")
+            input_string = input ("Ange sträng:")
+            from tools.base64encode import auto_encode_decode
+            auto_encode_decode(input_string)
+        elif val == "5":
             print("Avslutar programmet...")
             break
         else:
