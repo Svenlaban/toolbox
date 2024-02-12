@@ -1,6 +1,6 @@
 # Toolbox-CTF
 
-Välkommen till `toolbox-ctf`, ett repository skapat för att samla och dela verktyg, skript och resurser för Capture The Flag (CTF)-tävlingar. Här hittar du en mängd hjälpmedel som är utformade för att underlätta lösningen av CTF-utmaningar och penetrationstester inom olika kategorier.
+Välkommen till `toolbox-ctf`, ett repository skapat för att samla och dela verktyg, skript och resurser för Capture The Flag (CTF)-utmaningar. Här hittar du en mängd hjälpmedel som är utformade för att underlätta lösningen av CTF-utmaningar och penetrationstester inom olika kategorier.
 
 ## Innehåll
 
@@ -16,7 +16,7 @@ Toolboxen innehåller verktyg för:
 För att använda vissa verktyg i denna toolbox, behöver följande programvara vara installerad och korrekt konfigurerad på ditt system:
 
 - **nmapscan.py**: Kräver att `nmap` är installerat och tillgängligt i systemets sökväg (`PATH`).
-- **hashcat.py**: Kräver att `hashcat` är installerat samt tillgång till ordlistan `rockyou.txt`. Ordlistan bör placeras i `/toolbox-ctf/tools/wordlist/`.
+- **hashcat.py**: Kräver att `hashcat` är installerat och tillgängligt i systemets sökväg (`PATH`), samt tillgång till ordlistan `rockyou.txt`. Ordlistan ska placeras i `/toolbox-ctf/tools/wordlist/`.
 - **duckduckgosearch.py**: Kräver att webbläsaren Google Chrome är installerad.
 
 Om verktygslådan körs på ett Kali Linux-system, bör samtliga beroenden redan vara uppfyllda. Ordlistan `rockyou.txt` kan hittas på sökvägen `/usr/share/wordlists/rockyou.txt.gz`.
