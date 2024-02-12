@@ -1,13 +1,13 @@
 # Toolbox-CTF
 
-Välkommen till `toolbox-ctf`, ett repository skapat för att samla och dela verktyg, skript och resurser för Capture The Flag (CTF)-utmaningar. Här hittar du en mängd hjälpmedel som är utformade för att underlätta lösningen av CTF-utmaningar och penetrationstester inom olika kategorier.
+Välkommen till `toolbox-ctf`, ett repository skapat för att samla och dela verktyg, skript och resurser för Capture The Flag (CTF)-utmaningar. Här hittar du en mängd hjälpmedel som är utformade för att underlätta lösningen av CTF-utmaningar och IT-säkerhetstester inom olika kategorier.
 
 ## Innehåll
 
 Toolboxen innehåller verktyg för:
 
 - **Undersökning och scanning av IP-adresser**: Utforska och analysera nätverk.
-- **Knäckning av lösenord**: Bistå i återställningen av lösenord genom olika tekniker.
+- **Knäckning av lösenord**: Dekryptering av lösenordshashar genom olika tekniker.
 - **Caesarchiffer**: Hjälp med kryptering och dekryptering baserat på Caesars chiffer.
 - **Base64 decode/encode**: Konvertera data till och från Base64-kodning.
 
