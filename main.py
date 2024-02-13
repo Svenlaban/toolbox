@@ -71,7 +71,8 @@ def main():
         print("2: Knäcka en lösenordshash")
         print("3: Caesarchiffer")
         print("4: Base64 decode/encode")
-        print("5: Avsluta")
+        print("5: Skapa ett PHP Reverse Shell")
+        print("6: Avsluta")
 
         val = input("Ange ditt val: ")
         if val == "1":
@@ -89,6 +90,10 @@ def main():
             from tools.base64encode import auto_encode_decode
             auto_encode_decode(input_string)
         elif val == "5":
+            print("Skapar ett PHP Reverse Shell")
+            from tools.webshell import phpshell
+            phpshell()
+        elif val == "6":
             print("Avslutar programmet...")
             break
         else:
