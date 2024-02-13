@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ## Använda toolboxen
 
-Alla steg är självförklarande när man kör main.py.
+Alla steg är självförklarande efter start av main.py.
 
 ```bash
 Välkommen till CTF assistenten
