@@ -31,6 +31,7 @@ För att komma igång med `toolbox-ctf`, följ dessa steg:
 git clone https://github.com/Svenlaban/toolbox-ctf
 cd toolbox-ctf
 pip install -r requirements.txt
+```
 
 ## Använda toolboxen
 
@@ -46,3 +47,4 @@ Vad vill du undersöka?
 5: Skapa ett PHP Reverse Shell
 6: Avsluta
 Ange ditt val:
+```
